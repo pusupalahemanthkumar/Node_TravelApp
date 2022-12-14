@@ -3,6 +3,7 @@ DATABASE NAME : travelApp
 Collections :
 1. User Collection
 2. Place Collection
+3. Article Collection
 
 
 
@@ -12,6 +13,7 @@ User Collection Schema :
 - email
 - phoneNumber
 - image
+- role
 - password
 - bookmarks : [ _id ]
 
@@ -34,8 +36,8 @@ Place Collection Schema :
 
 Article Collection
 - _id
-- image 
 - title 
+- image 
 - shortDescription 
 - category : [ Array of string ]
 - content : [
