@@ -1,0 +1,53 @@
+DATABASE NAME : travelApp
+
+Collections :
+1. User Collection
+2. Place Collection
+
+
+
+User Collection Schema :
+- _id 
+- userName
+- email
+- phoneNumber
+- image
+- password
+- bookmarks : [ _id ]
+
+Place Collection Schema :
+- _id
+- placeName 
+- location
+- coordinates : {
+    latitude 
+    longitude 
+  }
+- images : [ Array of imageUrl ]
+- rating 
+- price 
+- dealPrice
+- offer 
+- discountPercentage : 
+- category : [ Array of string ]
+- description 
+
+Article Collection
+- _id
+- image 
+- title 
+- shortDescription 
+- category : [ Array of string ]
+- content : [
+    {
+        title 
+        description
+    }
+  ]
+
+
+
+
+
+
+
