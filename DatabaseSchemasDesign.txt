@@ -47,9 +47,4 @@ Article Collection
     }
   ]
 
-
-
-
-
-
-
+stackoverflow.com/questions/39711217/how-to-save-base64-directly-to-mongoose-in-express-js

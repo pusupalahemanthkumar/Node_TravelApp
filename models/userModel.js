@@ -17,7 +17,7 @@ const userSchema = mongoose.Schema(
       required: true,
     },
     image: {
-      type: Buffer,
+      type: String,
       required: true,
     },
     role: {
