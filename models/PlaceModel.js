@@ -12,10 +12,10 @@ const placeSchema = mongoose.Schema(
     },
     coordinates: {
       latitude: {
-        type: mongoose.Decimal128,
+        type: Number,
       },
       longitude: {
-        type: mongoose.Decimal128,
+        type: Number,
       },
     },
     images: [
@@ -28,11 +28,11 @@ const placeSchema = mongoose.Schema(
       required: true,
     },
     price: {
-      type: mongoose.Decimal128,
+      type: Number,
       required: true,
     },
     dealPrice: {
-      type: mongoose.Decimal128,
+      type: Number,
     },
     offer: {
       type: Boolean,

@@ -30,7 +30,7 @@ const userSchema = mongoose.Schema(
     },
     bookmarks: [
       {
-        type: mongoose.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "Place",
       },
     ],
