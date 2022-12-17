@@ -1,6 +1,7 @@
 import asyncHandler from "express-async-handler";
 
 import User from "../models/userModel.js";
+import Place from "../models/PlaceModel.js";
 import generateToken from "../utils/generateTokens.js";
 
 //Authenciate User
@@ -64,4 +65,50 @@ const getuserDetails = asyncHandler ( async (req,res,next)=>{
   }
 })
 
-export { authUser, registerUser, getuserDetails };
+const addBookmarks = asyncHandler ( async (req, res, next) =>{
+  try{
+    let {bookmarks} = req.user;
+    const placeId = req.params.id;
+    
+    // If saved then  remove it
+    if(bookmarks.includes(placeId)){
+      bookmarks = bookmarks.filter((item)=> item != placeId);
+    }else{
+      bookmarks.push(placeId);
+    }
+
+    const data = await User.updateOne(
+      {
+        _id : req.user._id,
+      },{
+        bookmarks : bookmarks
+      }
+    );
+    const user = await User.findOne({_id : req.user._id});
+    console.log(user);
+    res.json(user.bookmarks);
+
+  }catch(error){
+    res.status(500);
+    throw error;
+
+  }
+})
+
+const getBookmarks = asyncHandler ( async (req, res, next) =>{
+  try{
+    const bookmarksIds = req.user.bookmarks;
+    if(bookmarksIds.length > 0){
+      const data = await Place.find({ _id : { $in: bookmarksIds  } });
+      res.json(data);
+    }else{
+      res.json([]);
+    }
+     
+  }catch(error){
+    res.status(500);
+    throw error;
+  }
+})
+
+export { authUser, registerUser, getuserDetails, addBookmarks, getBookmarks };

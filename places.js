@@ -7,8 +7,8 @@
       "longitude": 77.188713
     },
     "images": [
-      "https://img.traveltriangle.com/blog/wp-content/uploads/2020/01/Manali-In-Summer_20th-jan.jpg",
       "https://www.holidify.com/images/cmsuploads/compressed/28022192021_b8e82eb874_b_20190320141704.jpg",
+      "https://img.traveltriangle.com/blog/wp-content/uploads/2020/01/Manali-In-Summer_20th-jan.jpg",
       "https://www.holidify.com/images/compressed/490.jpg?v=1.1",
       "https://www.holidify.com/images/cmsuploads/compressed/Rohtang_pass_snowy_valley01_20190320140229.jpg",
       "https://www.holidify.com/images/cmsuploads/compressed/183128172_80e060c6cf_20190320132142.jpg",
